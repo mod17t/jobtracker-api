@@ -139,7 +139,7 @@ class ApplicationController extends Controller
             ->groupBy('status')
             ->pluck('count', 'status');
 
-        $responses = ($byStatus['relancee'] ?? 0)
+        $responses = ($byStatus['relance'] ?? 0)
                    + ($byStatus['entretien'] ?? 0)
                    + ($byStatus['refus'] ?? 0)
                    + ($byStatus['acceptee'] ?? 0);

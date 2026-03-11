@@ -25,7 +25,7 @@ return new class extends Migration
             // stocké la date d'envoi de la candidature | format: année/mois/jour
             $table->date('applied_at');
             // stocké le status de la demande 
-            $table->enum('status',['envoyee', 'relance', 'entretien', 'refus', 'acceptee']) ->default('envoyee');
+            $table->enum('status', ['envoyee', 'relance', 'entretien', 'refus', 'acceptee'])->default('envoyee');
             // stocké la date de relance
             $table->date('follow_up_at')->nullable();
             // stoké l'url du lien
@@ -45,6 +45,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('application');
+        Schema::dropIfExists('applications');
     }
 };
